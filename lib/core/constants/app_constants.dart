@@ -5,9 +5,10 @@ import 'package:symphony_app/features/website/presentation/pages/website_screen.
 
 class AppConstants {
   // Screen Titles
-  static const String routeErrorTitle = 'Route Error';
+  static const String homeScreenTitle = 'My Symphony';
   static const String websiteScreenTitle = 'Website Screen';
   static const String socialScreenTitle = 'Social Screen';
+  static const String routeErrorTitle = 'Route Error';
 
   // Button Labels
   // static const String loginButtonLabel = 'Login';

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../routes/routes_name.dart';
+import '../../utils/colors_class.dart';
 import 'bloc/navigation_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({super.key});
@@ -46,19 +48,47 @@ class BottomNavigation extends StatelessWidget {
                     );
                   }
                 },
-                selectedItemColor: Colors.red,
-                unselectedItemColor: Colors.grey,
-                items: const [
+                items: [
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.web_outlined),
+                    icon: SvgPicture.asset(
+                      'assets/icons/web_icon.svg',
+                      height: 24,
+                      width: 24,
+                      colorFilter: ColorFilter.mode(
+                        state.currentIndex == 0
+                            ? ColorsClass.accentColor
+                            : Colors.grey,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                     label: 'Website',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.home_outlined),
+                    icon: SvgPicture.asset(
+                      'assets/icons/home_icon.svg',
+                      height: 24,
+                      width: 24,
+                      colorFilter: ColorFilter.mode(
+                        state.currentIndex == 1
+                            ? ColorsClass.accentColor
+                            : Colors.grey,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                     label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.sensor_occupied),
+                    icon: SvgPicture.asset(
+                      'assets/icons/social_icon.svg',
+                      height: 24,
+                      width: 24,
+                      colorFilter: ColorFilter.mode(
+                        state.currentIndex == 2
+                            ? ColorsClass.accentColor
+                            : Colors.grey,
+                        BlendMode.srcIn,
+                      ),
+                    ),
                     label: 'Social',
                   ),
                 ],

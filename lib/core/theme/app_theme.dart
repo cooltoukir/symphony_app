@@ -27,6 +27,20 @@ class AppTheme {
         foregroundColor: ColorsClass.darkPrimaryColor,
       ),
     ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: ColorsClass.accentColor,
+      unselectedItemColor: Colors.grey,
+      selectedLabelStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+      ),
+      unselectedLabelStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+      ),
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -45,6 +59,20 @@ class AppTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorsClass.grey600,
         foregroundColor: ColorsClass.whiteColor,
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: ColorsClass.accentColor,
+      unselectedItemColor: Colors.grey,
+      selectedLabelStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+      ),
+      unselectedLabelStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
       ),
     ),
   );

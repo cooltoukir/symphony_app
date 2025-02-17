@@ -16,7 +16,7 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final Routes _appRoutes = getIt<Routes>();
+  final Routes _routes = getIt<Routes>();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         darkTheme: AppTheme.darkTheme,
         themeMode: ThemeMode.system,
         initialRoute: RoutesName.initialScreen,
-        onGenerateRoute: _appRoutes.generateRoute,
+        onGenerateRoute: _routes.generateRoute,
       ),
     );
   }
