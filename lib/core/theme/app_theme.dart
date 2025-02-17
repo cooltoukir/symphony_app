@@ -12,13 +12,24 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: ColorsClass.lightPrimaryColor,
     textTheme: TextTheme(
-      labelLarge: TextStyle(color: ColorsClass.darkPrimaryColor),
+      labelLarge: TextStyle(
+        color: ColorsClass.darkPrimaryColor,
+        fontFamily: 'Urbanist',
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: ColorsClass.lightPrimaryColor,
       systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
         statusBarColor: ColorsClass.whiteColor,
         statusBarIconBrightness: Brightness.dark,
+      ),
+      titleTextStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontWeight: FontWeight.w700,
+        fontSize: 18,
+        color: ColorsClass.darkPrimaryColor,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -47,12 +58,25 @@ class AppTheme {
     primaryColor: ColorsClass.darkPrimaryColor,
     colorScheme: ColorScheme.dark(primary: ColorsClass.darkPrimaryColor),
     scaffoldBackgroundColor: ColorsClass.darkPrimaryColor,
-    textTheme: TextTheme(labelLarge: TextStyle(color: ColorsClass.whiteColor)),
+    textTheme: TextTheme(
+      labelLarge: TextStyle(
+        color: ColorsClass.whiteColor,
+        fontFamily: 'Urbanist',
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
+    ),
     appBarTheme: AppBarTheme(
       backgroundColor: ColorsClass.darkPrimaryColor,
       systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
         statusBarColor: ColorsClass.whiteColor,
         statusBarIconBrightness: Brightness.dark,
+      ),
+      titleTextStyle: TextStyle(
+        fontFamily: 'Urbanist',
+        fontWeight: FontWeight.w700,
+        fontSize: 18,
+        color: ColorsClass.lightPrimaryColor,
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(

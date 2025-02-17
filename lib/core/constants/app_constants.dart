@@ -11,18 +11,22 @@ class AppConstants {
   static const String routeErrorTitle = 'Route Error';
 
   // Button Labels
-  // static const String loginButtonLabel = 'Login';
-  // static const String logoutButtonLabel = 'Logout';
-  // static const String saveButtonLabel = 'Save';
+  static const String supportButtonLabel = 'Check Support';
 
   // Error Messages
   static const String routeErrorMessage = 'No route generated!';
 
-  // static const String networkErrorMessage =
-  //     'No internet connection. Please check your network settings.';
-
   // Other Constants
-  // static const int maxItemsPerPage = 10;
+  static const String needHelp = 'Need Help?';
+  static const String trendingItems = 'Trending items';
+  static const String mobiles = 'Mobiles';
+  static const String watches = 'Watches';
+  static const String accessories = 'Accessories';
+  static const String entertainment = 'Entertainment';
+  static const String eWarrantyCard = 'E-warranty card';
+  static const String games = 'Games';
+  static const String seeMore = 'See more';
+  static const String joinSocialCommunity = 'JOIN SOCIAL COMMUNITY';
 
   static const List<Widget> bottomNavBarScreens = [
     WebsiteScreen(),
