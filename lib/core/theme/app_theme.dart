@@ -31,6 +31,9 @@ class AppTheme {
         fontSize: 18,
         color: ColorsClass.darkPrimaryColor,
       ),
+      iconTheme: IconThemeData(
+        color: Colors.red, // Set the back arrow color to red
+      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -77,6 +80,9 @@ class AppTheme {
         fontWeight: FontWeight.w700,
         fontSize: 18,
         color: ColorsClass.lightPrimaryColor,
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.red, // Set the back arrow color to red
       ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(

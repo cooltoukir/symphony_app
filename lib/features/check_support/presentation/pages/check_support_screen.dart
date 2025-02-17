@@ -1,91 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:symphony_app/core/constants/app_constants.dart';
 
-import '../../../../core/routes/routes_name.dart';
 import '../../../../core/widgets/bottom_navigation/bottom_navigation.dart';
+import '../widgets/support_item_widget.dart';
 
 class CheckSupportScreen extends StatelessWidget {
-  CheckSupportScreen({super.key});
-
-  final List<bool> isClickable = [false, true, true, false, true, false];
-  final List<String?> routes = [
-    null,
-    RoutesName.serviceCenterScreen,
-    RoutesName.lsoQueryScreen,
-    null,
-    RoutesName.serviceCenterScreen,
-    null,
-  ];
+  const CheckSupportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        leadingWidth: 50,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 14.0),
+          child: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
-        title: const Text('Check Support'),
+        titleSpacing: 4,
+        title: const Text(AppConstants.checkSupportScreenTitle),
       ),
-      body: GridView.builder(
-        padding: EdgeInsets.all(16),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.count(
           crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          mainAxisSpacing: 16.0,
+          crossAxisSpacing: 16.0,
+          childAspectRatio: 1.3,
+          children:
+              AppConstants.supportItems
+                  .map(
+                    (item) =>
+                        SupportItemWidget(item: item, isDarkMode: isDarkMode),
+                  )
+                  .toList(),
         ),
-        itemCount: 6,
-        itemBuilder: (context, index) {
-          return CustomGridItem(
-            imagePath: 'assets/image${index + 1}.png',
-            text: 'Item ${index + 1}',
-            isClickable: isClickable[index],
-            onTap:
-                isClickable[index]
-                    ? () => Navigator.pushNamed(context, routes[index]!)
-                    : null,
-          );
-        },
       ),
       bottomNavigationBar: BottomNavigation(),
-    );
-  }
-}
-
-class CustomGridItem extends StatelessWidget {
-  final String imagePath;
-  final String text;
-  final bool isClickable;
-  final VoidCallback? onTap;
-
-  const CustomGridItem({
-    super.key,
-    required this.imagePath,
-    required this.text,
-    required this.isClickable,
-    this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: isClickable ? Colors.blue : Colors.grey,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(imagePath, height: 50, width: 50),
-            SizedBox(height: 8),
-            Text(text, style: TextStyle(color: Colors.white, fontSize: 16)),
-          ],
-        ),
-      ),
     );
   }
 }

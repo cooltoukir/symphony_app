@@ -3,6 +3,8 @@ import 'package:symphony_app/core/constants/app_constants.dart';
 
 import '../../../../core/routes/routes_name.dart';
 import '../../../../core/utils/colors_class.dart';
+import '../widgets/game_item_widget.dart';
+import '../widgets/trending_item_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -142,20 +144,17 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildCategoryItem(
-                    context,
-                    AppConstants.mobiles,
-                    "assets/images/home_image_3.png",
+                  TrendingItemWidget(
+                    title: AppConstants.mobiles,
+                    image: "assets/images/home_image_3.png",
                   ),
-                  _buildCategoryItem(
-                    context,
-                    AppConstants.watches,
-                    "assets/images/home_image_4.png",
+                  TrendingItemWidget(
+                    title: AppConstants.watches,
+                    image: "assets/images/home_image_4.png",
                   ),
-                  _buildCategoryItem(
-                    context,
-                    AppConstants.accessories,
-                    "assets/images/home_image_5.png",
+                  TrendingItemWidget(
+                    title: AppConstants.accessories,
+                    image: "assets/images/home_image_5.png",
                   ),
                 ],
               ),
@@ -245,9 +244,9 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildGameItem("assets/images/home_image_8.png"),
-                  _buildGameItem("assets/images/home_image_9.png"),
-                  _buildGameItem("assets/images/home_image_10.png"),
+                  GameItemWidget(image: "assets/images/home_image_8.png"),
+                  GameItemWidget(image: "assets/images/home_image_9.png"),
+                  GameItemWidget(image: "assets/images/home_image_10.png"),
                 ],
               ),
               const SizedBox(height: 16),
@@ -280,52 +279,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _buildCategoryItem(BuildContext context, String title, String image) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.28,
-      decoration: BoxDecoration(
-        color: ColorsClass.whiteColor,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: Colors.grey.withValues(alpha: 0.3),
-          width: 1.0,
-        ),
-      ),
-      padding: const EdgeInsets.only(top: 10.0),
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontFamily: 'Urbanist',
-              color: ColorsClass.darkPrimaryColor,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          const SizedBox(height: 4),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: AspectRatio(
-              aspectRatio: 16 / 15,
-              child: Image.asset(image, fit: BoxFit.fill),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildGameItem(String image) {
-    return Container(
-      width: 110,
-      height: 130,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-      clipBehavior: Clip.hardEdge,
-      child: Image.asset(image, fit: BoxFit.fill),
     );
   }
 }
