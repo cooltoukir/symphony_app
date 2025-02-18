@@ -5,6 +5,7 @@ import 'package:symphony_app/features/social/presentation/pages/social_screen.da
 import 'package:symphony_app/features/website/presentation/pages/website_screen.dart';
 
 import '../../features/check_support/data/check_support_item_data.dart';
+import '../../features/specification/data/specification_item.dart';
 import '../routes/routes_name.dart';
 
 class AppConstants {
@@ -93,6 +94,55 @@ class AppConstants {
       description:
           'Service Touch Point, Configure Bepari Shopping Complex, Badda, Dhaka - 1212',
       distance: '2.71 KM',
+    ),
+  ];
+
+  static List<SpecificationItem> specificationItems = [
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_2.png',
+      title: 'Processor',
+      description: 'MediaTek Helio G99\n6nm 2.2GHz Octa\nCore',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_3.png',
+      title: 'Storage',
+      description: 'ROM 128GB',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_4.png',
+      title: 'Display',
+      description: '6.7" FHD+ AMOLED GGS 120Hz\nPunch Hole',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_5.png',
+      title: 'Ram',
+      description: '16GB (8GB\nExpandable RAM)',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_6.png',
+      title: 'Sim Card',
+      description: 'Nano+Nano/Micro\nTF Card',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_7.png',
+      title: 'Camera',
+      description:
+          '64MP + 2MP Macro Rear & 32MP Super Selfie\nwith Display Flash',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_8.png',
+      title: 'Network',
+      description: '4G, 3G, 2G',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_9.png',
+      title: 'Battery',
+      description: '5000mAh',
+    ),
+    SpecificationItem(
+      iconPath: 'assets/icons/specification_icon_10.png',
+      title: 'Device Sensors',
+      description: 'Fingerprint/Proximity/Light/Gravity/Magnetic/\nGyro Sensor',
     ),
   ];
 }

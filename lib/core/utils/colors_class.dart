@@ -17,10 +17,13 @@ class ColorsClass {
   static Color borderBlack20 = HexColor('#33E7EBF2');
   static Color textGrey = HexColor('#8B8B8B');
   static Color white50 = HexColor('#80000000');
+  static Color white80 = HexColor('#CCFFFFFF');
   static Color black50 = HexColor('#40000000');
   static Color black10 = HexColor('#1A000000');
   static Color black20 = HexColor('#33000000');
   static Color grey = HexColor('#414243');
   static Color grey20 = HexColor('#33D1D1D1');
   static Color disGrey = HexColor('#D1D1D1');
+  static Color green = HexColor('#34A853');
+  static Color titleWhite = HexColor('#80FFFFFF');
 }
