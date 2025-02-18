@@ -10,4 +10,11 @@ class ColorsClass {
   static Color grey600 = HexColor('#757575');
   static Color white40 = HexColor('#66000000');
   static Color moreBlue = HexColor('#334671FC');
+  static Color lessRed = HexColor('#33FF002B');
+  static Color blackColor = HexColor('#000000');
+  static Color lessBlack = HexColor('#1F2022');
+  static Color borderBlack = HexColor('#E7EBF2');
+  static Color borderBlack20 = HexColor('#33E7EBF2');
+  static Color textGrey = HexColor('#8B8B8B');
+  static Color white50 = HexColor('#80000000');
 }
