@@ -5,16 +5,13 @@ import '../../data/check_support_item_data.dart';
 
 class SupportItemWidget extends StatelessWidget {
   final CheckSupportItemData item;
-  final bool isDarkMode;
 
-  const SupportItemWidget({
-    super.key,
-    required this.item,
-    required this.isDarkMode,
-  });
+  const SupportItemWidget({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
       decoration: BoxDecoration(
         color:

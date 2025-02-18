@@ -9,8 +9,6 @@ class CheckSupportScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 50,
@@ -35,10 +33,7 @@ class CheckSupportScreen extends StatelessWidget {
           childAspectRatio: 1.3,
           children:
               AppConstants.supportItems
-                  .map(
-                    (item) =>
-                        SupportItemWidget(item: item, isDarkMode: isDarkMode),
-                  )
+                  .map((item) => SupportItemWidget(item: item))
                   .toList(),
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:symphony_app/features/home/presentation/pages/home_screen.dart';
+import 'package:symphony_app/features/service_center/data/service_center_item_data.dart';
 import 'package:symphony_app/features/social/presentation/pages/social_screen.dart';
 import 'package:symphony_app/features/website/presentation/pages/website_screen.dart';
 
@@ -71,6 +72,27 @@ class AppConstants {
       label: 'Book An Appointment',
       imageAsset: 'assets/icons/check_support_icon_6.png',
       routeName: '',
+    ),
+  ];
+
+  static List<ServiceCenterItemData> serviceCenterItemData = [
+    ServiceCenterItemData(
+      title: 'Badda (CC) - Dhaka',
+      description:
+          'Service Touch Point, Configure Bepari Shopping Complex, Badda, Dhaka - 1212',
+      distance: '2.71 KM',
+    ),
+    ServiceCenterItemData(
+      title: 'Badda (CC) - Dhaka',
+      description:
+          'Service Touch Point, Configure Bepari Shopping Complex, Badda, Dhaka - 1212',
+      distance: '2.71 KM',
+    ),
+    ServiceCenterItemData(
+      title: 'Badda (CC) - Dhaka',
+      description:
+          'Service Touch Point, Configure Bepari Shopping Complex, Badda, Dhaka - 1212',
+      distance: '2.71 KM',
     ),
   ];
 }
